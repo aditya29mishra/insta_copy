@@ -27,10 +27,10 @@ class feedRecyclerView : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         itemView: View
     ) : RecyclerView.ViewHolder(itemView) {
 
-        val userphoto: =itemView.
+        val userphoto: =itemView.post_photo
 
 
-        fun bind(blogPost: feed_package){
+        fun bind(feedPackage: feed_package){
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)

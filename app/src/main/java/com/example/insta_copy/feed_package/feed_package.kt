@@ -7,12 +7,11 @@ class feed_package(
     var user_profile: String,
     var caption: String,
     var like: String,
-    var comments: String,
     )
 {
 
     override fun toString(): String {
-        return "feed(user_name='$user_name', user_id='$user_id', post_photo='$post_photo', user_photo='$user_profile', id='$user_id', caption='$caption', comment='$comments' , like='$like')"
+        return "feed(user_name='$user_name', user_id='$user_id', post_photo='$post_photo', user_photo='$user_profile', id='$user_id', caption='$caption', like='$like')"
     }
 
 

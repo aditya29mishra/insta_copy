@@ -38,6 +38,7 @@
             tools:ignore="RtlSymmetry">
 
             <TextView
+                android:text="Text name"
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -48,6 +49,7 @@
                 tools:ignore="NestedWeights" />
 
             <TextView
+                android:text="user text"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
