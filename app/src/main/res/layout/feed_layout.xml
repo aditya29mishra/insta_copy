@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:cardPreventCornerOverlap="false">
+    app:cardPreventCornerOverlap="false"
+    android:id="@+id/feed_view">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -63,7 +65,7 @@
         <ImageView
             android:id="@+id/post"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="350dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:scaleType="centerCrop" />

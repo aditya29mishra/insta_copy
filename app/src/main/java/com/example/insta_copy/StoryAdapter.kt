@@ -36,21 +36,21 @@ class StoryAdapter: RecyclerView.Adapter<StoryAdapter.StoryViewholder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoryViewholder {
-        return StoryViewholder(
-            LayoutInflater.from(parent.context).inflate(R.layout.feed_layout, parent, false)
-        )
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.stories,parent,false)
+        return StoryViewholder(v)
     }
 
-    override fun onBindViewHolder(viewHolder: StoryViewholder, position: Int) {
+    override fun onBindViewHolder(viewHolder: StoryAdapter.StoryViewholder, position: Int) {
         viewHolder.item_id.text = id[position]
-        viewHolder.item_profile.imageAlpha = profile[position]    }
+        viewHolder.item_profile.setImageResource(profile[position])
+    }
 
     override fun getItemCount(): Int {
-        return id.size;
+        return id.size
     }
 
 
-    class StoryViewholder(
+   inner class StoryViewholder(
     itemView: View
     ) : RecyclerView.ViewHolder(itemView) {
         var item_id: TextView

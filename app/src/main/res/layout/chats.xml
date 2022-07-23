@@ -2,7 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/chat_view">
 
 
     <LinearLayout
@@ -23,10 +25,10 @@
                 android:id="@+id/user_profile"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:paddingStart="2dp"
-                android:paddingTop="2dp"
-                android:paddingEnd="2dp"
-                android:paddingBottom="2dp" />
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -38,6 +40,7 @@
             tools:ignore="RtlSymmetry">
 
             <TextView
+                android:layout_gravity="center"
                 android:text="Text name"
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"

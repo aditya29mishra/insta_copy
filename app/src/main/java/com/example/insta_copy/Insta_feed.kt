@@ -11,6 +11,8 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import kotlinx.android.synthetic.main.fragment_insta_feed.*
 
 
@@ -18,6 +20,8 @@ class Insta_feed : Fragment(), View.OnClickListener {
 
     private var NavController: NavController? = null
 
+
+    private var LayoutManager: LayoutManager? = null
     private var adapter1: RecyclerView.Adapter<FeedAdapter.FeedViewHolder>? = null
     private var adapter2: RecyclerView.Adapter<StoryAdapter.StoryViewholder>? = null
 
@@ -32,7 +36,6 @@ class Insta_feed : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_insta_feed, container, false)
     }
 
@@ -41,15 +44,14 @@ class Insta_feed : Fragment(), View.OnClickListener {
         NavController = view?.let { Navigation.findNavController(it) }
         view?.findViewById<ImageView>(R.id.chatButton)?.setOnClickListener(this)
 
+
         feedRecycle.apply {
-            val linearLayoutManager:LinearLayoutManager = LinearLayoutManager(activity)
-            linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+            layoutManager = LinearLayoutManager(activity, HORIZONTAL,false)
             adapter1 = FeedAdapter()
         }
         storyRecycle.apply {
 
-            val linearLayoutManager:LinearLayoutManager = LinearLayoutManager(activity)
-            linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
+            layoutManager = LinearLayoutManager(activity)
             adapter2 = StoryAdapter()
         }
 

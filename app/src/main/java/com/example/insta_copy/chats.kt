@@ -54,7 +54,7 @@ class chats : Fragment() ,View.OnClickListener{
     override fun onClick(p: View?) {
         when(p!!.id){
 
-            R.id.chatButton -> NavController!!.navigate(R.id.action_chats_to_insta_feed)
+            R.id.back_button -> NavController!!.navigate(R.id.action_chats_to_insta_feed)
 
         }
     }

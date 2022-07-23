@@ -54,7 +54,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/storyRecycle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/stories">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -62,7 +64,8 @@
         android:id="@+id/feedRecycle"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        tools:listitem="@layout/feed_layout">
 
     </androidx.recyclerview.widget.RecyclerView>
 

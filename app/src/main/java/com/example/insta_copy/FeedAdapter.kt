@@ -55,8 +55,8 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.FeedViewHolder>() {
 
     override fun onBindViewHolder(viewHolder: FeedViewHolder, position: Int) {
         viewHolder.item_id.text = id[position]
-        viewHolder.item_profile.imageAlpha = profile[position]
-        viewHolder.item_post.imageAlpha = post[position]
+        viewHolder.item_profile.setImageResource(profile[position])
+        viewHolder.item_post.setImageResource(post[position])
 
 
     }
