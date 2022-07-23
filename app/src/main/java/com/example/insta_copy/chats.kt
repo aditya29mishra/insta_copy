@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -40,7 +41,7 @@ class chats : Fragment() ,View.OnClickListener{
 
 
         NavController= view?.let { Navigation.findNavController(it) }
-        view.findViewById(R.id.back_button).setOnclickListener (this)
+        view?.findViewById<ImageView>(R.id.back_button)?.setOnClickListener(this)
 
 
         chatRecycle.apply {

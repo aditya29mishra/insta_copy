@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -17,7 +18,6 @@ class Insta_feed : Fragment(), View.OnClickListener {
 
     private var NavController: NavController? = null
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter1: RecyclerView.Adapter<FeedAdapter.FeedViewHolder>? = null
     private var adapter2: RecyclerView.Adapter<StoryAdapter.StoryViewholder>? = null
 
@@ -39,16 +39,17 @@ class Insta_feed : Fragment(), View.OnClickListener {
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
         NavController = view?.let { Navigation.findNavController(it) }
-        view?.findViewById(R.id.chatButton).setOnclickListener(this)
+        view?.findViewById<ImageView>(R.id.chatButton)?.setOnClickListener(this)
 
         feedRecycle.apply {
-
-            layoutManager = LinearLayoutManager(activity)
+            val linearLayoutManager:LinearLayoutManager = LinearLayoutManager(activity)
+            linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
             adapter1 = FeedAdapter()
         }
         storyRecycle.apply {
 
-            layoutManager = LinearLayoutManager(activity)
+            val linearLayoutManager:LinearLayoutManager = LinearLayoutManager(activity)
+            linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
             adapter2 = StoryAdapter()
         }
 
