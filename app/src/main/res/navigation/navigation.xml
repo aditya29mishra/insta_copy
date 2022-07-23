@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/insta_feed">
+
+    <fragment
+        android:id="@+id/insta_feed"
+        android:name="com.example.insta_copy.Insta_feed"
+        android:label="fragment_insta_feed"
+        tools:layout="@layout/fragment_insta_feed" >
+        <action
+            android:id="@+id/action_insta_feed_to_chats"
+            app:destination="@id/chats"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chats"
+        android:name="com.example.insta_copy.chats"
+        android:label="fragment_chats"
+        tools:layout="@layout/fragment_chats" >
+        <action
+            android:id="@+id/action_chats_to_insta_feed"
+            app:destination="@id/insta_feed"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+
+</navigation>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".insta_feed">
+    tools:context=".Insta_feed">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/chat"
+            android:id="@+id/chatButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@drawable/white_background">
@@ -52,16 +52,17 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/story"
+        android:id="@+id/storyRecycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </androidx.recyclerview.widget.RecyclerView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/feed"
+        android:id="@+id/feedRecycle"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 

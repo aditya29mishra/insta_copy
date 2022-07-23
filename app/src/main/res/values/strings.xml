@@ -1,8 +1,33 @@
 <resources>
     <string name="app_name">insta_copy</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Instagram">Instagram</string>
     <string name="it_s_aditya">it.s.aditya._</string>
     <string name="view_all_comments">view all comments</string>
+    <string name="id1">id1</string>
+    <string name="id2">id2</string>
+    <string name="id">id</string>
+    <string name="search">search</string>
+
+    <string-array name="id_name">
+        <item>Aditya Mishra</item>
+        <item>Anvansh Anurag</item>
+        <item>Utkarsh shukla</item>
+        <item>Prabhath Keshri</item>
+        <item>Naveen Mishra</item>
+        <item>Shashwat sharama</item>
+        <item>Parthav Shinghal</item>
+        <item>Kanishk Agrawal</item>
+    </string-array>
+
+    <string-array name="user_id">
+        <item>it.s.aditya._ </item>
+        <item>_anvansh_</item>
+        <item>_utkarsh_</item>
+        <item>-prabhath_</item>
+        <item>_naveen_</item>
+        <item>_shashwat_</item>
+        <item>_parthav_</item>
+        <item>_kanishk_</item>
+    </string-array>
 </resources>

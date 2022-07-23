@@ -6,9 +6,11 @@
         <entry key="..\:/projects/insta_copy/app/src/main/res/drawable/colourfull.xml" value="0.203" />
         <entry key="..\:/projects/insta_copy/app/src/main/res/drawable/white_background.xml" value="0.203" />
         <entry key="..\:/projects/insta_copy/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
-        <entry key="..\:/projects/insta_copy/app/src/main/res/layout/chats.xml" value="0.25" />
+        <entry key="..\:/projects/insta_copy/app/src/main/res/layout/chats.xml" value="0.4" />
         <entry key="..\:/projects/insta_copy/app/src/main/res/layout/feed_layout.xml" value="0.4" />
+        <entry key="..\:/projects/insta_copy/app/src/main/res/layout/fragment_chats.xml" value="0.25" />
         <entry key="..\:/projects/insta_copy/app/src/main/res/layout/fragment_insta_chat.xml" value="0.264" />
+        <entry key="..\:/projects/insta_copy/app/src/main/res/layout/fragment_insta_chat2.xml" value="0.25" />
         <entry key="..\:/projects/insta_copy/app/src/main/res/layout/fragment_insta_feed.xml" value="0.4" />
         <entry key="..\:/projects/insta_copy/app/src/main/res/layout/stories.xml" value="0.72" />
       </map>
