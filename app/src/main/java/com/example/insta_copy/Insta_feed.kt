@@ -10,6 +10,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_insta_feed.*
 
 
 class Insta_feed : Fragment(), View.OnClickListener {
@@ -38,8 +39,7 @@ class Insta_feed : Fragment(), View.OnClickListener {
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
         NavController = view?.let { Navigation.findNavController(it) }
-        view.findViewById(R.id.chatButton).setOnclickListener(this)
-
+        view?.findViewById(R.id.chatButton).setOnclickListener(this)
 
         feedRecycle.apply {
 

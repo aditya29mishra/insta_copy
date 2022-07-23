@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_chats.*
 
 
 class chats : Fragment() ,View.OnClickListener{
@@ -40,7 +41,6 @@ class chats : Fragment() ,View.OnClickListener{
 
         NavController= view?.let { Navigation.findNavController(it) }
         view.findViewById(R.id.back_button).setOnclickListener (this)
-
 
 
         chatRecycle.apply {
