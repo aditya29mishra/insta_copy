@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
 
-
     private val name = arrayOf(
         "Aditya mishra",
         "Anvash Anurag",
@@ -71,7 +70,7 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return name.size;
+        return name.size
     }
 }
 

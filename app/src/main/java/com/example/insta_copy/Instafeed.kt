@@ -11,20 +11,21 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import androidx.recyclerview.widget.RecyclerView.*
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_insta_feed.*
 
 
-class Insta_feed : Fragment(), View.OnClickListener {
+class Instafeed : Fragment(), View.OnClickListener {
 
     private var NavController: NavController? = null
 
 
-    private var LayoutManager: LayoutManager? = null
-    private var adapter1: RecyclerView.Adapter<FeedAdapter.FeedViewHolder>? = null
-    private var adapter2: RecyclerView.Adapter<StoryAdapter.StoryViewholder>? = null
+       private var layoutManager: LayoutManager? = null
+       private var adapter: RecyclerView.Adapter<FeedAdapter.FeedViewHolder>? = null
+//    private var adapter2: RecyclerView.Adapter<StoryAdapter.StoryViewholder>? = null
 
+        private  var adapterr : RecyclerView.Adapter<StoryAdapter.StoryViewholder>? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,22 +42,20 @@ class Insta_feed : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
-        NavController = view?.let { Navigation.findNavController(it) }
-        view?.findViewById<ImageView>(R.id.chatButton)?.setOnClickListener(this)
 
+        NavController = view?.let { Navigation.findNavController(it) }
 
         feedRecycle.apply {
-            layoutManager = LinearLayoutManager(activity, HORIZONTAL,false)
-            adapter1 = FeedAdapter()
+            layoutManager = LinearLayoutManager(activity)
+            adapter = FeedAdapter()
         }
         storyRecycle.apply {
 
             layoutManager = LinearLayoutManager(activity)
-            adapter2 = StoryAdapter()
+            adapterr = StoryAdapter()
         }
-
+        view?.findViewById<ImageView>(R.id.chatButton)?.setOnClickListener(this)
     }
-
 
     override fun onClick(v: View?) {
 

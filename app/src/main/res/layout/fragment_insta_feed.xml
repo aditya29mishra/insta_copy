@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Insta_feed">
+    tools:context=".Instafeed">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,24 +50,34 @@
 
     </LinearLayout>
 
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/storyRecycle"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="100dp"
         android:orientation="horizontal"
         tools:listitem="@layout/stories">
 
     </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/feedRecycle"
-        android:layout_weight="1"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
         tools:listitem="@layout/feed_layout">
 
     </androidx.recyclerview.widget.RecyclerView>
 
-
+    </LinearLayout>
 </LinearLayout>

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_chats.*
 
 
-class chats : Fragment() ,View.OnClickListener{
+class Chats : Fragment() ,View.OnClickListener{
 
     private var NavController: NavController? = null
 

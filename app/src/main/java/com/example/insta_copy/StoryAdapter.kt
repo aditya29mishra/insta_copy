@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class StoryAdapter: RecyclerView.Adapter<StoryAdapter.StoryViewholder>() {
 
-
     private val id = arrayOf(
         "My story",
         "_anvansh_",
@@ -20,8 +19,6 @@ class StoryAdapter: RecyclerView.Adapter<StoryAdapter.StoryViewholder>() {
         "_parthav_",
         "_kanishk_"
     )
-
-
     private val profile = arrayOf(
         R.drawable.my_profile,
         R.drawable.anvansh_modified,
@@ -33,14 +30,11 @@ class StoryAdapter: RecyclerView.Adapter<StoryAdapter.StoryViewholder>() {
         R.drawable.kanish_modified
     )
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoryViewholder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.stories,parent,false)
-        return StoryViewholder(v)
+        return StoryViewholder(
+            LayoutInflater.from(parent.context).inflate(R.layout.stories, parent, false))
     }
-
-    override fun onBindViewHolder(viewHolder: StoryAdapter.StoryViewholder, position: Int) {
+    override fun onBindViewHolder(viewHolder: StoryViewholder, position: Int) {
         viewHolder.item_id.text = id[position]
         viewHolder.item_profile.setImageResource(profile[position])
     }
@@ -58,7 +52,7 @@ class StoryAdapter: RecyclerView.Adapter<StoryAdapter.StoryViewholder>() {
 
         init {
             item_id = itemView.findViewById(R.id.userid)
-            item_profile = itemView.findViewById(R.id.profile)
+            item_profile = itemView.findViewById(R.id.idprofile)
         }
     }
 
