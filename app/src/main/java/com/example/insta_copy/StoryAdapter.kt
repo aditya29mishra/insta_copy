@@ -10,15 +10,22 @@ import androidx.recyclerview.widget.RecyclerView
 class StoryAdapter: RecyclerView.Adapter<StoryAdapter.StoryViewholder>() {
 
     private val id = arrayOf(
-        "My story",
+        "it.s.aditya._",
         "_anvansh_",
         "_utkarsh_",
         "prabhath_",
         "_naveen_",
         "_shashwat_",
         "_parthav_",
-        "_kanishk_"
+        "_kanishk_",
+        "_addi_",
+        "_manas_",
+        "_yash_",
+        "_aditya_",
+        "_abhishek_",
+        "_shobhit_"
     )
+
     private val profile = arrayOf(
         R.drawable.my_profile,
         R.drawable.anvansh_modified,
@@ -27,8 +34,15 @@ class StoryAdapter: RecyclerView.Adapter<StoryAdapter.StoryViewholder>() {
         R.drawable.naveen_modified,
         R.drawable.shaswat_modified,
         R.drawable.parthav_modified,
-        R.drawable.kanish_modified
+        R.drawable.kanish_modified,
+        R.drawable.addi_modified,
+        R.drawable.manas_modified,
+        R.drawable.yash_modified,
+        R.drawable.aditya_kumar_modified,
+        R.drawable.abhishek_verma_modified,
+        R.drawable.shibhit_modified
     )
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoryViewholder {
         return StoryViewholder(

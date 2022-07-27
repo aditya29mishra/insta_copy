@@ -21,11 +21,11 @@ class Instafeed : Fragment(), View.OnClickListener {
     private var NavController: NavController? = null
 
 
-       private var layoutManager: LayoutManager? = null
-       private var adapter: RecyclerView.Adapter<FeedAdapter.FeedViewHolder>? = null
+    private var layoutManager: LayoutManager? = null
+    private var feedAdapter: RecyclerView.Adapter<FeedAdapter.FeedViewHolder>? = null
 //    private var adapter2: RecyclerView.Adapter<StoryAdapter.StoryViewholder>? = null
 
-        private  var adapterr : RecyclerView.Adapter<StoryAdapter.StoryViewholder>? =null
+    private  var storyadapter : RecyclerView.Adapter<StoryAdapter.StoryViewholder>? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,13 +46,15 @@ class Instafeed : Fragment(), View.OnClickListener {
         NavController = view?.let { Navigation.findNavController(it) }
 
         feedRecycle.apply {
-            layoutManager = LinearLayoutManager(activity)
-            adapter = FeedAdapter()
+            layoutManager = LinearLayoutManager(context)
+            feedAdapter = FeedAdapter()
+            adapter = feedAdapter
         }
         storyRecycle.apply {
 
-            layoutManager = LinearLayoutManager(activity)
-            adapterr = StoryAdapter()
+            layoutManager = LinearLayoutManager(context, HORIZONTAL,false)
+            storyadapter = StoryAdapter()
+            adapter = storyadapter
         }
         view?.findViewById<ImageView>(R.id.chatButton)?.setOnClickListener(this)
     }
@@ -67,4 +69,3 @@ class Instafeed : Fragment(), View.OnClickListener {
 
     }
 }
-
