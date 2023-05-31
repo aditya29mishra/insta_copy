@@ -57,7 +57,7 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
 
     }
 
-    class ChatViewHolder(
+ inner class ChatViewHolder(
         itemView: View
     ) : RecyclerView.ViewHolder(itemView) {
         var item_name: TextView
